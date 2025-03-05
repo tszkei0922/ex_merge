@@ -10,10 +10,10 @@ def get_todos():
     return jsonify(todos), 200
 
 @app.route('/todos', methods=['POST'])
-def add_todo():
-    todo = request.json
-    todos.append(todo)
-    return jsonify(todo), 201
+def add_item():
+    items = request.json
+    todos.append(items)
+    return jsonify(todos), 201
 
 @app.route('/todos/<int:todo_id>', methods=['PUT'])
 def update_todo(todo_id):
